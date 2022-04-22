@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        'use strict';
+
+        // 재선언O 재할당O 범위function
+        var 이름 = 'Kim';
+        var 이름 = 'Park';
+
+        function 함수(){
+            var 이름 = 'Kim';
+            이름;
+        }
+
+        // 재선언x 재할당O 범위{}
+        let 나이 = '20';
+        나이 = '30';
+
+        if(true){
+            let 이름 = 'Park';
+            이름;
+        }
+
+        // for(let v = 1;){
+            
+        // }
+
+        // 재선언x 재할당x 범위{}
+        const 직업 = '학생';
+
+        const 사람 = { 이름 : 'Kim' }
+        사람.이름 = 'Park';
+
+        const 과일 = { 이름 : 'Tomato' }
+        Object.freeze(과일);
+
+        
+    </script>
+</body>
+</html>

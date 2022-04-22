@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+        console.log(나이);
+        //1. var 나이;
+        //변수의 호이스팅 현상
+
+        var 나이 = 30;
+        //2. 나이 = 30;
+
+        console.log(나이);
+
+        // var 나이 = '20', 이름 = 'ㅁ', 성별; 
+
+        function 함수(){
+            var 이름 = 'Kim';
+        }
+
+        window.이름 = 'A';
+        console.log(이름);
+        console.log(window.이름);
+
+        window.이름 = function(){ };
+
+        if(true){
+            let a = 1;
+            var b = 2;
+            if(true){
+                let b = 3;
+            }
+            console.log(b);
+        }
+    </script>
+</body>
+</html>
