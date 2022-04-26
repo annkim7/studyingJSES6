@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        //과제1
+        var a = [1,2,3];
+        var b = '김밥';
+        var c = [...b, ...a];
+        console.log(c);
+        //'김밥', 1, 2, 3
+
+        //과제2
+        var a = [1,2,3];
+        var b = ['you', 'are'];
+        var c = function(a,b){
+            console.log( [[...a], ...[...b]][1] )
+        }
+        c(a,b);
+        //[1,2,3, y,o,u,a,r,e] -> 1
+
+        //과제3
+        function 함수(a = 5, b = a * 2 ){
+            console.log(a + b);
+            return 10
+        }
+        함수(3);
+        //9
+
+        //과제4
+        function 함수(a = 5, b = a * 2 ){
+            console.log(a + b);
+        }
+        함수(undefined, undefined);
+        //undefined
+
+        //과제5
+        function 어레이(...rest){
+            //(여기 어떤코드가 들어가면 될까요?)
+            return rest;
+        }
+
+        var newArray = 어레이(1,2,3,4,5);
+        console.log(newArray);
+
+        //과제6
+        var numbers = [2,3,4,5,6,1,3,2,5,5,4,6,7];
+        console.log(Math.max(...numbers));
+
+        //과제7
+        function 정렬(문자){
+            //(여기 어떤 코드가 들어가야할까요?)
+            console.log([...문자].sort());
+        }
+
+        정렬('bear');
+
+        //과제8
+        function 글자세기(글자){
+            console.log(...글자);
+        }
+
+        글자세기('aacbbb');
+    </script>
+</body>
+</html>
