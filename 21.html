@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        Student.prototype.gender = '남';
+
+        var 학생1 = new Student('Park');
+        var 학생2 = new Student('Kim');
+
+        학생1.toString();
+
+        var arr = [1, 2, 3];
+        var arr = new Array(1,2,3);
+        var obj = { name : 'Kim'};
+        var obj = new Object();
+
+        var 부모 = {name : 'Kim'};
+        var 자식 = {};
+        
+        자식.__proto__ = 부모;
+        자식.name;
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        // var 변수 = 1234;
+        // var 어레이 = [1,2,3];
+        // var obj = { name : 'Kim' };
+
+        //Primitive data type 다루기 : 복사
+        // var 이름1 = '김';
+        // var 이름2 = 이름1;
+        // 이름1 = '박';
+
+        //Reference data type 다루기 : 복사
+        // var 이름1 = { name : '김' };
+        // var 이름2 = { name : '김' };
+
+        // 이름1.name = '박';
+        // console.log(이름2);
+
+        // console.log(이름1 == 이름2);
+
+        var 이름1 = { name : '김' };
+
+        function 변경(obj){
+            obj = { name : 'Park' };
+        }
+
+        변경(이름1);
+    </script>
+</body>
+</html>
