@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //과제1
+        class 강아지 {
+            constructor(종류, 색상){
+                this.type = 종류;
+                this.color = 색상;
+            }
+            //과제3
+            한살먹기(){
+                if( this instanceof 고양이 ){
+                    this.age++
+                }
+            }
+        }
+
+        var 강아지1 = new 강아지('말티즈','white');
+        var 강아지2 = new 강아지('진돗개','brown');
+
+
+        //과제2
+        class 고양이 extends 강아지 {
+            constructor(종류, 색상, 나이){
+                super(종류, 색상);
+                this.age = 나이;
+            }
+        }
+
+        var 고양이1 = new 고양이('코숏','white', 5);
+        var 고양이2 = new 고양이('러시안블루','brown', 2);
+        
+        //과제4
+        // class Unit {
+        //     constructor(공격력, 체력){
+        //         this.attact = 공격력;
+        //         this.strength = 체력;
+                
+        //     }
+        //     get battlePoint(){
+        //         return this.attact + this.strength;
+        //     }
+        //     set heal(a){
+        //         this.strength += a;
+        //     }
+        // }
+
+        // var 사람 = new Unit();
+
+        // console.log( 사람.battlePoint );
+        // 사람.heal = 50;
+
+        class Unit {
+            constructor(){
+                this.체력 = 100;
+                this.공격력 = 5;
+            }
+            get battlePoint(){
+                return this.체력 + this.공격력;
+            }
+            set heal(a){
+                this.체력 = this.체력 + a; 
+            }
+        };
+
+        var 쎈애 = new Unit();
+
+        console.log(쎈애.battlePoint);
+        쎈애.heal = 50;
+
+        //과제5
+        var data = {
+            odd : [],
+            even : [],
+            set setNumber(num){
+                num.forEach((a) => {
+                    
+                    if(a%2 == 1){
+                        this.odd.push(a);
+                    }else{
+                        this.even.push(a);
+                    }
+
+                });
+            },
+            get sort(){
+                return [...this.odd, ...this.even].sort();
+            }
+        }
+
+        data.setNumber = [1,2,3,4,5];
+        console.log(data.odd);
+        console.log(data.even);
+        console.log(data.sort);
+    </script>
+</body>
+</html>
