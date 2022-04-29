@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // console.log(1);
+        // setTimeout(()=>{ console.log(2) }, 1000);
+        // console.log(3);
+        // element.addEventListener('click', function(){})
+        // $.ajax();
+
+        // print(1)
+        // time.sleep(2)
+        // print(3)
+
+        function 첫째함수(구멍){
+            console.log(1);
+            구멍();
+        }
+
+        function 둘째함수(){
+            console.log(2);
+        }
+
+        첫째함수(둘째함수);
+
+        첫째함수(fucntion(){
+            둘째함수(function(){
+
+            })
+        });
+
+        첫째함수().then(function(){
+
+        }).then(function(){
+
+        })
+    </script>
+</body>
+</html>

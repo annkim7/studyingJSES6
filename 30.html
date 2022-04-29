@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="library.js"></script>
+    <script type="module">
+        
+        // import a from '/library.js';
+        // console.log(a);
+
+        // import {a} from '/library.js';
+        // console.log(a);
+
+        // import c from '/library.js';
+
+        // import c,{a,b} from '/library.js';
+
+        // import { a as 별명 } from '/library.js';
+        // console.log(a);
+
+        import c, * as 별명 from '/library.js';
+        console.log(c);
+
+        var 임포트해온것들 = require('/library.js');
+    </script>
+</body>
+</html>
