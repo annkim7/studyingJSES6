@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // class 부모{
+
+        // }
+        // 부모.prototype.name = "Park";
+
+        // var 오브젝트 = new 부모();
+        // var 오브젝트 = { name : 'Kim', age : 30 };
+        //Object.getOwnPropertyDescriptor(오브젝트, 'name');
+        //enumerable 셀 수 있는 것
+
+        // for(var i = 0; i<3; i++){
+
+        // }
+
+        // [1,2,3].forEach();
+        
+        //오브젝트 전용
+        
+        // for(var key in 오브젝트){
+        //     if(오브젝트.hasOwnProperty(key)){
+        //         console.log(오브젝트[key]);
+        //     }
+        //     //오브젝트.key
+        //     //오브젝트['key']
+        // }
+
+        // var 어레이 = [2,3,4,5];
+        // //literable한 자료형에만 사용가능
+        // // for( var 자료 of 어레이 ){
+        // //     console.log(오브젝트[key]);
+        // // }
+
+        // 어레이[Symbol.iterator]();
+        // document.getElementsByClassName(); [HTML1, HTML2]
+        //document.querySelectorAll(); [HTML1, HTML2]
+
+        //과제1
+        let 데이터 = [1,2,3,4,5,6,7,8,9];
+        for(var data in 데이터){
+            
+            for(var data1 in 데이터){
+                console.log(데이터[data]*데이터[data1]);
+            }
+        }
+
+        //과제2
+        var products = [
+            {
+                name1 : 'chair',
+                price1 : 7000,
+            },
+            {
+                name2 : 'sofa',
+                price : 5000,
+            },
+            {
+                name1 : 'desk',
+                price3 : 9000,
+            },
+        ];
+
+        // let 오브젝트 = {
+        //     name1 : 'chair'
+        // }
+
+        // if(isNaN(parseInt('name1'.slice(-1))) == false){
+        //     let newValue = 오브젝트['name1'];
+        //     let newKey = 'name1'.slice(0, -1);
+        //     오브젝트[newKey] = newValue;
+
+        //     delete 오브젝트['name1'];
+        // }
+
+        // console.log(오브젝트);
+        
+        let newValue;
+        let newKey;
+
+        for(let item of products){
+            for(let key in item){
+                if(isNaN(parseInt(key.slice(-1))) == false){
+                    newValue = item[key];
+                    newKey = key.slice(0, -1);
+                    item[newKey] = newValue;
+                    delete item[key];
+                }
+            }
+        }
+
+        console.log(products);
+    </script>
+</body>
+</html>
