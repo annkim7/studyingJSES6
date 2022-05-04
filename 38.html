@@ -9,34 +9,35 @@
 <body>
     
     <script>
-        //Object 자료형의 비밀스런 key값
-        // var 심볼 = Symbol('설명');
+        //map 자료형
+        // var person = new Map();
 
-        // var weight = Symbol('내 시크릿 몸무게임');
-        // var height = Symbol('내 시크릿 키임');
+        // person.set([1,2,3], 'Kim');
+        // person.set('age', 20);
 
-        // var person = { name : 'Kim' };
-        // var person = { name : 'Kim', [height] : 160 };
-        // person.weight = 100;
-        // person[weight] = 200;
-        // person[height] = 160;
+        // //person.size;
+        // //person.get('age');
+        // //person.delete('age');
 
-        // for(var key in person){
-        //     console.log(person[key]);
+        // var person = new Map([
+        //     ['name', 'Kim'],
+        //     ['age', 20] 
+        // ]);
+
+        // for( var key of person.keys()){
+        //     console.log(key);
         // }
         
-        var person = { name : 'Kim', [height] : 160 };
+        //set 자료형
+        var 출석부 = ['john', 'tom', 'andy', 'tom'];
+        var 출석부2 = new Set(['john', 'tom', 'andy', 'tom']);
 
-        var a = Symbol('설명1');
-        var b = Symbol('설명1');
-        //a == b false
+        출석부2.add('sally');
+        //출석부2.has('sally');
+        //출석부2.size('sally');
 
-        var c = Symbol.for('설명1');
-        var d = c;
-        //a == b true
-
-        var 어레이 = [2,3,4];
-        어레이[Symbol.iterator];
+        //set자료형 -> array자료형
+        출석부 = [...출석부2];
     </script>
 </body>
 </html>
