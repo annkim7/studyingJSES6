@@ -31,6 +31,7 @@ class Cactus {
 }
 
 var timer = 0;
+var cactus여러개 = [];
 
 function 프레임마다실행할거(){
     requestAnimationFrame(프레임마다실행할거);
@@ -38,11 +39,28 @@ function 프레임마다실행할거(){
 
     ctx.clearRect(0,0, canvas.width, canvas.height);
 
-    if(timer % 20 === 0){
+    if(timer % 120 === 0){
         var cactus = new Cactus();
-        cactus.draw();
+        cactus여러개.push(cactus);
     }
-    
+
+    cactus여러개.forEach((a, i, o)=>{
+        //x좌표가 0미만이면 제거
+        
+        if(a.x < 0){
+            o.splice(i, 1);
+        }
+        //a.x--;
+        a.draw();
+    })
+    //dino.y--;
     dino.draw();
 }
+
 프레임마다실행할거();
+
+document.addEventListener('keydown', function(e){
+    if(e.code === 'Space'){
+        dino.y--;
+    }
+})
