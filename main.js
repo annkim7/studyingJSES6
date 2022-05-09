@@ -32,6 +32,7 @@ class Cactus {
 
 var timer = 0;
 var cactus여러개 = [];
+var 점프timer = 0;
 
 function 프레임마다실행할거(){
     requestAnimationFrame(프레임마다실행할거);
@@ -54,13 +55,30 @@ function 프레임마다실행할거(){
         a.draw();
     })
     //dino.y--;
+
+    if(점프중 == true){
+        dino.y--;
+        점프timer++;
+    }
+    if(점프중 == false){
+        if(dino.y < 200){
+            dino.y++;
+        }
+        
+    }
+    if(점프timer > 100){
+        점프중 = false;
+        점프timer = 0;
+    }
     dino.draw();
 }
 
 프레임마다실행할거();
 
+var 점프중 = false;
+
 document.addEventListener('keydown', function(e){
     if(e.code === 'Space'){
-        dino.y--;
+        점프중 = true;
     }
 })
